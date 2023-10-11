@@ -215,4 +215,54 @@
 {
     height: auto;
 }
+.dmsp
+{
+  width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-basis: 0;
+  
+}
 
+.item-inner-dmsp
+{
+    position: relative !important;
+    padding: 8px;
+    border: 1px solid #F2F4F5;
+    background-color: white;
+    position: absolute;
+    max-width: 115px;
+   
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&family=Rubik&display=swap');
+.ul-content-dmsp
+{   color: rgb(220, 125, 128);
+    list-style: none;
+    padding: 20px 20px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    text-align: left;
+    align-items: baseline;
+    margin-top: 0;
+    margin-bottom: 0;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   height: auto;
+
+}
+.img-item-dmsp
+{
+    max-height: 100px;
+    overflow: hidden;
+    
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: top;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
