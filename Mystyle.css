@@ -4,13 +4,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&family=Rubik&display=swap');
 .content {
-    background-color: #7a747469;
+    background-color: #edebebae;
     box-sizing: border-box;
     border-radius: 0.65em;
     padding-top: 3em;
     padding-bottom: 3em;
 
+}
+.xuhuong
+{
+ background-color: #FCDDEF;padding-bottom: 12px;
+ display: flex;
+ padding-left: 20px;
+ padding-top: 12px;
+ align-items: center;
+ font-weight: 600;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 17px;
 }
 .products
 {
@@ -20,7 +32,7 @@
 }
 
 .content-kernel-head {
-    background-color: #F2F4F5;
+    background-color: #ffffff;
    padding-left: 0.7em;
     padding-top: 1em;
     padding-bottom: 0.8em;
@@ -84,10 +96,13 @@
 }
 
 .content-kernel-body {
-    background-color: #F2F4F5;
+    background-color: #ffffff;
     margin-left: 120px;
     margin-right: 120px;
     height: auto;
+    border-radius: 10px;
+    border: 1px 
+    solid #cfcbcb;
 }
 .div-img-item
 {
@@ -95,6 +110,7 @@
     justify-content:center;
     align-items: center
 }
+
 
 .img-item {
     max-height: 190px;

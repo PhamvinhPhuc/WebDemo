@@ -1,0 +1,389 @@
+*
+{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans:wght@500&family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&family=Rubik&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Noto+Sans:wght@500&family=Open+Sans:ital@1&family=Poppins:wght@200&family=Roboto:wght@500&family=Rubik&family=Work+Sans&display=swap');
+html
+{
+    background-color: rgb(240, 240, 240);
+}
+.onestepcheckout
+{
+    margin: 0px 120px;
+}
+.tieude
+{
+padding: 8px 0px;
+border-bottom: 1px solid rgb(212, 211, 211);
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+}
+.chung
+{   margin-bottom: 16px;
+    padding: 8px 16px;
+    background-color: rgb(255, 255, 255);
+}
+.input-style {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+  width: 446px;
+  height: 28px;
+}
+
+.input-style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+.diachi
+{
+  width: 640px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-select-sm
+{ padding-left: 10px;
+  width: 446px;
+  height: 28px;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  color: #707070;
+  font-weight: 400px;
+  
+}
+.item-phuong-thuc-thanh-toan
+{
+    
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.checkbox {
+    appearance: none;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    border: 2px solid black;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .checkbox::before {
+    font-family: "Quicksand", sans-serif;
+    position: absolute;
+    bottom: -4px;
+    left: 1px;
+    content: "✔";
+    font-size: 25px;
+    color: rgb(255, 153, 0);
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .checkbox:checked::before {
+    animation: zoom 0.5s ease-in-out;
+    transform: scale(1);
+  }
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(0);
+    }
+  
+    20% {
+      transform: scale(1.5);
+    }
+  
+    40% {
+      transform: scale(0.5);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  
+    70% {
+      transform: scale(1.2);
+    }
+  
+    90% {
+      transform: scale(0.8);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+ .img-loai-thanh-toan
+ {
+    width: 35px;
+    height: 15px;
+    
+    margin: auto;
+ }
+  .loai-thanh-toan
+  { display: flex;
+    align-items: center;
+    margin: 0;
+    border: 2px solid rgb(138, 138, 138);
+    width: 50px;
+   height: 30px;
+   margin-left: 12px;
+  }
+  .ten-thanh-toan
+  {  margin-left: 12px;
+     font-size: 15px;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: 400;
+  }
+.input-group {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30Px;
+    padding-bottom: 5px;
+    width: 40%;
+    
+  }
+  .first-thanhvien
+  {
+ width: 400px;
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+  }
+  .cl2
+  {
+    height: 40px;
+    padding: 8px 0px 4px 0px;
+    color: #ccc;
+  }
+  .cl1
+  {
+    padding-top: 5px ;
+  }
+  .style-so-thanhvien
+  {
+    color: #ed912f;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  padding-left: 10px;
+    
+  }
+  .style-thanhvien
+  {
+    
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+    
+  }
+  
+  .input-vocher-chuthich
+  {   
+    color: rgb(184, 184, 184);
+    
+    margin-left: 30Px;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .submit-button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(201, 113, 113, 0.24);
+    background:#2F80ED;
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover {
+    transition: 0.3s;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    cursor: pointer;
+  }
+  
+  .submit-button:active {
+    transform: translate(0em, 0.2em);
+  }
+  
+  .submit-button span {
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+  }
+  
+  .submit-button:hover span {
+    background: #3F5EFB;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s;
+  }
+  
+  #input-field {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px 0 0 10px;
+    border:1px solid #d4d4d4;
+    width: 500px;
+    padding-left: 8px;
+    color: rgb(212, 212, 212);
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  ::placeholder {
+    color: rgb(184, 184, 184);
+  }
+.img-item-tralaidonhang
+{
+    width: 145px;
+    height: 145px;
+}
+.box-item-tralaidonhang 
+{
+    padding:8px 0 8px 0 ;
+}
+.item-tralaidonhang 
+{
+   display: flex;
+   flex-direction: row;
+   padding: 4px 0 8px 0;
+   border-bottom: 1px solid #d0cfcf;
+}
+.item-produc-ktldh
+{ display: flex;
+    flex-direction: row;
+    width: calc(100% - 145px);
+    font-size: 14px;
+    font-family: nunito-sans, sans-serif, Helvetica, Arial;
+}
+
+
+
+.item-gia
+{   display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+.item-soluong
+{
+    width: 5%;
+}
+.name-item
+{
+font-size: 14px;
+width: 65%;
+
+}
+.item-gia-cu {
+    padding: 0;
+    
+    text-decoration: line-through;
+    transform: translate3d(0px, 0px, 0px);
+   color: rgb(214, 212, 212);
+
+}
+.item-thanhtien
+{
+font-weight: 600;
+color: rgb(221, 147, 37)
+}
+.container
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px -4px 10px -4px rgba(0,0,0,0.66);
+}
+.conten-the-end-check-out
+{ height: 100px;
+  width: 100%;
+  background-color: #ffffff;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 123px;
+}
+
+.fhs_checkout_total_grand_total
+{
+  margin-left: 120px;
+}
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0em 0 1em 0;
+  width: 450px;
+  
+  position: relative;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #ffffff;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(152, 152, 209);
+}
+.fhs-input-alert-info
+{
+ 
+  margin: 15px 0px;
+  color: #ed2f2f;
+}
+.thong-tin-khac-cl1
+{
+ align-items: center;
+ display: flex;
+ height: 30px;
+}
+#cl1 #cl2
+{
+  margin: 15px 0px;
+}

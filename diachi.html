@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web_chinh.css">
+</head>
+
+<body>
+    <div class="main-content-acccount">
+        <div style="margin-bottom: 15px;  background-color: #ffffff ;padding-top: 20px;padding-left: 15px;">
+            <div class="thong-tin-tai-khoan">
+                <h1> THÊM ĐỊA CHỈ MỚI</h1>
+            </div>
+            <div style="display: flex;">
+                <div claas="thong-tin-lien-he" style="margin-left: 35px;">
+                    <h2>THÔNG TIN LIÊN HỆ</h2>
+                    <div class="main-thong-tin-lien-he">
+                        <div class="input-container">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Tên</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="main-thong-tin-lien-he">
+                        <div class="input-container">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Họ</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="main-thong-tin-lien-he">
+                        <div class="input-container">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Ex:0972xxxxxx</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Dia-chi" style="margin-left: 90px;">
+                    <h2>ĐỊA CHỈ</h2>
+                    <div class="main-thong-tin-lien-he">
+                        <div class="input-container" style="width: 420px;">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Địa chỉ</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <div class="diachi">
+                        <span>Tỉnh/Thành Phố </span>
+                        <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
+                            <option value="" selected>---Chọn Tỉnh/Thành Phố---</option>
+                        </select>
+                    </div>
+                    <div class="diachi">
+                        <span>Quận/Huyện</span>
+                        <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
+                            <option value="" selected>---Chọn Quận/Huyện---</option>
+                        </select>
+                    </div>
+                    <div class="diachi">
+                        <span>Phường/Xã</span>
+                        <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
+                            <option value="" selected>---Chọn Phường/Xã---</option>
+                        </select>
+                    </div>
+
+
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+                    <script>
+                        var citis = document.getElementById("city");
+                        var districts = document.getElementById("district");
+                        var wards = document.getElementById("ward");
+                        var Parameter = {
+                            url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+                            method: "GET",
+                            responseType: "application/json",
+                        };
+                        var promise = axios(Parameter);
+                        promise.then(function (result) {
+                            renderCity(result.data);
+                        });
+
+                        function renderCity(data) {
+                            for (const x of data) {
+                                citis.options[citis.options.length] = new Option(x.Name, x.Id);
+                            }
+                            citis.onchange = function () {
+                                district.length = 1;
+                                ward.length = 1;
+                                if (this.value != "") {
+                                    const result = data.filter(n => n.Id === this.value);
+
+                                    for (const k of result[0].Districts) {
+                                        district.options[district.options.length] = new Option(k.Name, k.Id);
+                                    }
+                                }
+                            };
+                            district.onchange = function () {
+                                ward.length = 1;
+                                const dataCity = data.filter((n) => n.Id === citis.value);
+                                if (this.value != "") {
+                                    const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+                                    for (const w of dataWards) {
+                                        wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                                    }
+                                }
+                            };
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="the-end-dia-chi">
+            <div class="conten-the-end-check-out" >
+                <div>
+                    <div class="fhs_checkout_total_grand_total">
+                    </div>
+                    <div><a style="text-decoration: none; color: gray;" href="/checkout/cart/"><span
+                                style="padding-right: 8px;"><img
+                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=10293"></span><span>Quay
+                                về giỏ hàng</span></a></div>
+                </div>
+                <div>
+                    <div class="buton-luuthaydoi" style="margin-top:45px;">
+                        <button class="btn-luuthaydoi">LƯU THAY ĐỔI</button>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
